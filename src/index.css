@@ -1,4 +1,211 @@
+/* Importar la fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Estilos generales para todos los elementos */
+* {
+	margin: 0;
+	/* Elimina el margen exterior */
+	padding: 0;
+	/* Elimina el relleno interior */
+	border: 0;
+	/* Elimina los bordes */
+	outline: 0;
+	/* Elimina los contornos al enfocar */
+	box-sizing: border-box;
+	/* Establece el modelo de caja de borde */
+	list-style: none;
+	/* Elimina los estilos de lista */
+	text-decoration: none;
+	/* Elimina la decoración de texto */
+}
+
+/* Variables CSS personalizadas */
+:root {
+	--color-bg: #1f1f38;
+	/* Color de fondo principal */
+	--color-bg-variant: #2c2c6c;
+	/* Variante del color de fondo */
+	--color-primary: #4db5ff;
+	/* Color primario */
+	--color-primary-variant: rgba(77, 181, 255, 0.4);
+	/* Variante del color primario */
+	--color-white: #fff;
+	/* Color blanco */
+	--color-light: rgba(255, 255, 255, 0.6);
+	/* Color claro */
+
+	--transition: all 400ms ease;
+	/* Transición predeterminada para todas las propiedades */
+
+	--container-width-lg: 75%;
+	/* Ancho del contenedor para pantallas grandes */
+	--container-width-md: 86%;
+	/* Ancho del contenedor para pantallas medianas */
+	--container-width-sm: 90%;
+	/* Ancho del contenedor para pantallas pequeñas */
+}
+
+html {
+	scroll-behavior: smooth;
+	/* Establece el comportamiento de desplazamiento suave */
+}
+
+::-webkit-scrollbar {
+	display: none;
+	/* Oculta las barras de desplazamiento en navegadores WebKit */
+}
+
+/* Estilo para el cuerpo del documento */
 body {
-	background: black;
-	color: white;
+	font-family: 'Poppins', sans-serif;
+	/* Establece la fuente utilizada para el texto */
+	background: var(--color-bg);
+	/* Establece el color de fondo utilizando una variable CSS */
+	color: var(--color-white);
+	/* Establece el color del texto utilizando una variable CSS */
+	line-height: 1.7;
+	/* Establece la altura de línea para el texto */
+	background-image: url('.//assets/bg-texture.png');
+	/* Establece una imagen de fondo utilizando la ruta relativa */
+}
+
+/* ============== ESTILOS GENERALES ==============*/
+/* Estilos para un contenedor */
+.container {
+	width: var(--container-width-lg);
+	/* Establece el ancho del contenedor utilizando una variable CSS */
+	margin: 0 auto;
+	/* Centra el contenedor horizontalmente en la página */
+}
+
+/* Estilos para encabezados h1, h2, h3, h4, h5 */
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 500;
+	/* Establece el peso de la fuente para los encabezados */
+}
+
+h1 {
+	font-size: 2.5rem;
+	/* Establece el tamaño de fuente para h1 */
+}
+
+/* Estilos para secciones */
+section {
+	border: 1px solid goldenrod;
+	/* Establece un borde de 1px sólido con color dorado */
+	margin-top: 8rem;
+	/* Establece un margen superior de 8 rem */
+	height: 100vh;
+	/* Establece la altura de la sección al 100% del viewport */
+}
+
+/* Estilos para h2 y h5 dentro de secciones */
+section > h2,
+section > h5 {
+	text-align: center;
+	/* Centra el texto */
+	color: var(--color-light);
+	/* Establece el color del texto utilizando una variable CSS */
+}
+
+section > h2 {
+	color: var(--color-primary);
+	/* Establece el color del texto utilizando una variable CSS */
+	margin-bottom: 3rem;
+	/* Establece un margen inferior de 3 rem */
+}
+
+/* Estilos para texto con color claro */
+.text-light {
+	color: var(--color-light);
+	/* Establece el color del texto utilizando una variable CSS */
+}
+
+/* Estilos para enlaces */
+a {
+	color: var(--color-primary);
+	/* Establece el color del enlace utilizando una variable CSS */
+	transition: var(--transition);
+	/* Establece la transición utilizando una variable CSS */
+}
+
+a:hover {
+	color: var(--color-white);
+	/* Establece el color del enlace en el hover utilizando una variable CSS */
+}
+
+/* Estilos para botones */
+.btn {
+	width: max-content;
+	/* Establece el ancho del botón al ancho máximo del contenido */
+	display: inline-block;
+	/* Muestra el botón como un elemento en línea */
+	color: var(--color-primary);
+	/* Establece el color del texto del botón utilizando una variable CSS */
+	padding: 0.75rem 1.2rem;
+	/* Establece el relleno del botón */
+	border-radius: 0.4rem;
+	/* Establece el radio de borde del botón */
+	cursor: pointer;
+	/* Cambia el cursor al pasar por encima del botón */
+	border: 1px solid var(--color-primary);
+	/* Establece un borde de 1px sólido con color primario */
+	transition: var(--transition);
+	/* Establece la transición del botón utilizando una variable CSS */
+}
+
+.btn:hover {
+	background: var(--color-primary);
+	/* Establece el color de fondo del botón en el hover utilizando una variable CSS */
+	color: var(--color-bg);
+	/* Establece el color del texto del botón en el hover utilizando una variable CSS */
+	border-color: transparent;
+	/* Establece el color del borde del botón en el hover como transparente */
+}
+
+/* Estilos para imágenes */
+img {
+	border: px solid tomato;
+	/* Establece un borde de 1px sólido con color tomato (tomate) */
+	display: block;
+	/* Define la imagen como un elemento de bloque */
+	width: 100%;
+	/* Establece el ancho de la imagen al 100% del contenedor padre */
+	object-fit: cover;
+	/* Ajusta la imagen para cubrir completamente el contenedor sin deformarla */
+}
+
+/* ============== MEDIA QUERIES (MEDIUM DEVICES) ==============*/
+/* Estilos para el tamaño de pantalla máximo de 1024px */
+@media screen and (max-width: 1024px) {
+	.container {
+		width: var(--container-width-md);
+		/* Establece el ancho del contenedor utilizando una variable CSS para pantallas medianas */
+	}
+
+	section {
+		margin-bottom: 2rem;
+		/* Establece un margen inferior de 2 rem para las secciones */
+	}
+}
+
+/* ============== MEDIA QUERIES (SMALL DEVICES) ==============*/
+
+/* Media Queries para dispositivos pequeños (máximo 600px) */
+@media screen and (max-width: 600px) {
+	.container {
+		width: var(--container-width-sm);
+		/* Establece el ancho del contenedor utilizando una variable CSS para pantallas pequeñas */
+	}
+
+	section > h2 {
+		background: salmon;
+		/* Establece un fondo de color salmon para los h2 dentro de las secciones */
+		margin-bottom: 2rem;
+		/* Establece un margen inferior de 2 rem para los h2 dentro de las secciones */
+	}
 }
