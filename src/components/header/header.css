@@ -1,0 +1,83 @@
+/* Estilos del encabezado */
+header {
+	height: 100vh; /* Altura del encabezado igual a la altura de la ventana */
+	padding-top: 7rem; /* Espacio superior del encabezado */
+	overflow: hidden; /* Oculta el desbordamiento del contenido */
+}
+
+/* Estilos del contenedor del encabezado */
+.header__container {
+	text-align: center; /* Alineación del contenido al centro */
+	height: 100%; /* Altura del contenedor igual al 100% del padre */
+	position: relative; /* Posición relativa */
+}
+
+/* Estilos del CTA (llamado a la acción) */
+.cta {
+	margin-top: 2.5rem; /* Margen superior del CTA */
+	display: flex; /* Mostrar como flexbox */
+	gap: 1.2rem; /* Espacio entre elementos */
+	justify-content: center; /* Alineación horizontal al centro */
+}
+
+/* Estilos de los iconos sociales del encabezado */
+.header__socials {
+	display: flex; /* Mostrar como flexbox */
+	flex-direction: column; /* Dirección de columna */
+	align-items: center; /* Alineación vertical al centro */
+	gap: 0.8rem; /* Espacio entre elementos */
+	position: absolute; /* Posición absoluta */
+	left: 0; /* Alineación a la izquierda */
+	bottom: 3rem; /* Alineación inferior */
+	font-size: 1.5rem; /* Tamaño de fuente */
+}
+
+/* Estilos del elemento 'after' en los iconos sociales */
+.header__socials::after {
+	content: ''; /* Contenido vacío */
+	width: 1px; /* Ancho de 1 píxel */
+	height: 2rem; /* Altura de 2 rem */
+	background: var(--color-primary); /* Color de fondo */
+}
+
+/* Estilos del elemento "Me" */
+.me {
+	background: linear-gradient(var(--color-primary),transparent); /* Fondo con gradiente lineal */
+	width: 22rem; /* Ancho de 22 rem */
+	height: 25rem; /* Altura de 25 rem */
+	position: absolute; /* Posición absoluta */
+	left: calc(50% - 11rem); /* Alineación horizontal al centro */
+	margin-top: 4rem; /* Margen superior */
+	border-radius: 12rem 12rem 0 0; /* Borde redondeado */
+	overflow: hidden; /* Oculta el desbordamiento del contenido */
+	padding: 5rem 1.5rem 1.5rem 1.5rem; /* Relleno interno */
+}
+
+/* Estilos del elemento "Scroll Down" */
+.scroll__dow {
+	position: absolute; /* Posición absoluta */
+	right: -2.3rem; /* Alineación a la derecha */
+	bottom: 5rem; /* Alineación inferior */
+	transform: rotate(90deg); /* Rotación de 90 grados */
+	font-weight: 300; /* Grosor de fuente */
+	font-size: 0.9rem; /* Tamaño de fuente */
+}
+
+/* Estilos para dispositivos de tamaño medio */
+@media screen and (max-width: 1024px) {
+	header {
+		height: 68vh; /* Altura del encabezado en dispositivos de tamaño medio */
+	}
+}
+
+/* Estilos para dispositivos pequeños */
+@media screen and (max-width: 600px) {
+	header {
+		height: 100vh; /* Altura del encabezado en dispositivos pequeños */
+	}
+
+	.header__socials,
+	.scroll__dow {
+		display: none; /* Ocultar los elementos de .header__socials y .scroll__dow en dispositivos pequeños */
+	}
+}
