@@ -1,0 +1,36 @@
+/* Estilos para la barra de navegación */
+nav {
+	background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
+	width: max-content; /* Ancho ajustado al contenido */
+	display: block;
+	padding: 0.7rem 1.7rem; /* Espaciado interno */
+	z-index: 2; /* Índice de apilamiento */
+	position: fixed; /* Posición fija */
+	left: 50%; /* Centrado horizontal */
+	transform: translateX(-50%); /* Centrado horizontal */
+	bottom: 2rem; /* Posicionamiento en la parte inferior */
+	display: flex; /* Mostrar como una fila */
+	gap: 0.8rem; /* Espaciado entre elementos */
+	border-radius: 3rem; /* Bordes redondeados */
+	backdrop-filter: blur(15px); /* Filtro de desenfoque */
+}
+
+/* Estilos para los enlaces de la barra de navegación */
+nav a {
+	background: transparent; /* Fondo transparente */
+	padding: 0.9rem; /* Espaciado interno */
+	border-radius: 50%; /* Bordes redondeados */
+	display: flex; /* Mostrar como una fila */
+	color: var(--color-light); /* Color del texto */
+	font-size: 1.1rem; /* Tamaño de fuente */
+}
+
+/* Estilos al pasar el cursor sobre los enlaces de la barra de navegación */
+nav a:hover {
+	background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
+}
+
+/* Estilos para el enlace activo de la barra de navegación */
+nav a.active {
+	background: var(--color-bg); /* Fondo con color de fondo */
+}
