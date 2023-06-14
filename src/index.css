@@ -201,10 +201,12 @@ img {
 		width: var(--container-width-sm);
 		/* Establece el ancho del contenedor utilizando una variable CSS para pantallas pequeñas */
 	}
+	section {
+		height: auto;
+		/* Establece la altura de la sección al 100% del viewport */
+	}
 
 	section > h2 {
-		background: salmon;
-		/* Establece un fondo de color salmon para los h2 dentro de las secciones */
 		margin-bottom: 2rem;
 		/* Establece un margen inferior de 2 rem para los h2 dentro de las secciones */
 	}
