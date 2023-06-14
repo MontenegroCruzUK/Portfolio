@@ -42,8 +42,11 @@ header {
 
 /* Estilos del elemento "Me" */
 .me {
-	background: linear-gradient(var(--color-primary),transparent); /* Fondo con gradiente lineal */
-	width: 22rem; /* Ancho de 22 rem */
+	background: linear-gradient(
+		var(--color-primary),
+		transparent
+	); /* Fondo con gradiente lineal */
+	width: 25rem; /* Ancho de 22 rem */
 	height: 25rem; /* Altura de 25 rem */
 	position: absolute; /* Posición absoluta */
 	left: calc(50% - 11rem); /* Alineación horizontal al centro */
